@@ -15,7 +15,7 @@ for i in ab[210202017]:
 srcfile = openpyxl.load_workbook(
     '/Users/kirdemir/desktop/Yeni/Untitled 3.xlsx', read_only=False, keep_vba=True)
 for file in files:
-# Open all .csv files
+    # Open all .csv files
     if file.endswith('.csv'):
         df = pd.read_csv(os.path.join(directory, file))
 
