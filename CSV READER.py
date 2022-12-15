@@ -7,6 +7,7 @@ directory = '/Users/kirdemir/desktop'
 files = os.listdir(directory)
 mainList = []
 listOfNumbers = []
+f = open('errors.txt','w')
 # Set main .xlsx file path. Read values and put them in a list.
 file_path = '/Users/kirdemir/desktop/Yeni/Untitled 3.xlsx'
 ab = pd.read_excel(os.path.join(file_path))
@@ -28,7 +29,7 @@ for file in files:
                         try:
                             listOfNumbers.append(str(df['Unnamed: 4'][i])[:9])
                         except:
-                            print(df['Unnamed: 4'][i] + " listeye eklenemedi.")
+                            f.write(df['Unnamed: 4'][i] + " listeye eklenemedi.\n")
                             continue
                 except:
                     continue
